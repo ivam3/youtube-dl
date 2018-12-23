@@ -59,6 +59,7 @@ function Banner {
 	read enter
 }
 function Termux {
+	apt install git -y
 	if [ ! -d ~/youtube ]; then
 		cd;git clone https://github.com/ivam3/youtube-dl.git
 	fi
@@ -81,6 +82,7 @@ function Termux {
 	mv ~/youtube-dl/.data/LhDxGbtY ~/youtube-dl/bin/termux-url-opener
 	dos2unix ~/youtube-dl/bin/termux-url-opener
 	rm -rf ~/youtube-dl/.data
+	rm ~/youtube-dl/install.sh
 	printf "\n \n"
 	thanks
 	chao-chao
@@ -120,7 +122,7 @@ function chao-chao {
 	printf ":-->$W $ youtube-dl -u <youremail@email.com> -p <your password> + url$Y
 	\n"
 if [ $DISTRO = "termux" ]; then
-	printf "For more details going to community feedback group on Telegram \n\t\t$B >> t.me/Ivam3by_Cinderella
+	printf "For more details going to community feedback group on Telegram \n\t\t$B >> t.me/Ivam3by_Cinderella$W
 	\n\n"
 elif [ $DISTRO = "andrax" ]; then
 	printf "For more details going to community feedback group on Telegram \n\t\t$B >> t.me/andraxspanish$W
